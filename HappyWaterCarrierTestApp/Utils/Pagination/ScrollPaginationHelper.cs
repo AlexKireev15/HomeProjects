@@ -64,8 +64,10 @@ namespace HappyWaterCarrierTestApp.Utils.Pagination
             }
             else if (nextBuffer.IsEmpty()) //Temporary bad solution
             {
-                nextBuffer.PutItem(e);
-                MoveDown(1);
+                prevBuffer.PutItem(VisibleCollection[0]);
+                VisibleCollection.RemoveAt(0);
+                VisibleCollection.Add(e);
+                Position++;
             }
             
         }

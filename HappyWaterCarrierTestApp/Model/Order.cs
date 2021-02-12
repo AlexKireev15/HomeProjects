@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HappyWaterCarrierTestApp.Model
 {
-    class Order
+    public class Order
     {
         public virtual int ID { get; set; }
         public virtual String Counterparty { get; set; }

@@ -9,7 +9,7 @@ namespace HappyWaterCarrierTestApp.Utils.Pagination
 
         public override T GetItem()
         {
-            CheckForExtention();
+            CheckForExtention(Buffer.Count);
             if (Buffer.Count == 0)
                 return null;
             T item = Buffer.RemoveFromBack();
@@ -20,11 +20,11 @@ namespace HappyWaterCarrierTestApp.Utils.Pagination
             Buffer.AddToBack(item);
             CheckForReduce();
         }
-        protected override void CheckForExtention()
+        protected override void CheckForExtention(int bufferLength)
         {
-            if (Buffer.Count < ExtensionLength)
+            if (bufferLength < ExtensionLength)
             {
-                NHibernateHelper.GetInstance().GetAsync<T>(GetPosition() - ExtensionLength - Buffer.Count, ExtensionLength, (list) => {
+                NHibernateHelper.GetInstance().GetAsync<T>(GetPosition() - ExtensionLength - bufferLength, ExtensionLength, (list) => {
                     for (int idx = list.Count - 1; idx >= 0; --idx)
                         Buffer.AddToFront(list[idx]);
                 });

@@ -2,7 +2,7 @@
 
 namespace HappyWaterCarrierTestApp.Model
 {
-    class Unit
+    public class Unit
     {
         public virtual int ID { get; set; }
         public virtual string Name { get; set; }

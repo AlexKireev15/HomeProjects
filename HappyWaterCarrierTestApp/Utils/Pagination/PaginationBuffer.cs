@@ -28,6 +28,6 @@ namespace HappyWaterCarrierTestApp.Utils.Pagination
         }
         public abstract T GetItem();
         public abstract void PutItem(T item);
-        protected abstract void CheckForExtention();
+        protected abstract void CheckForExtention(int bufferLength);
     }
 }

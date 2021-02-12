@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace HappyWaterCarrierTestApp.Model
 {
-    class Employee
+    public class Employee
     {
         public virtual int ID { get; set; }
         public virtual string Surname { get; set; }

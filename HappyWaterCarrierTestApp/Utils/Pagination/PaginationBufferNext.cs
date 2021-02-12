@@ -1,9 +1,5 @@
 ﻿using HappyWaterCarrierTestApp.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HappyWaterCarrierTestApp.Utils.Pagination
 {
@@ -22,7 +18,7 @@ namespace HappyWaterCarrierTestApp.Utils.Pagination
         {
             lock (Buffer)
             {
-                CheckForExtention();
+                CheckForExtention(Buffer.Count);
                 if (Buffer.Count == 0)
                     return null;
                 T item = Buffer.RemoveFromFront();
@@ -37,23 +33,16 @@ namespace HappyWaterCarrierTestApp.Utils.Pagination
                 CheckForReduce();
             }
         }
-        protected override void CheckForExtention()
+        protected override void CheckForExtention(int bufferLength)
         {
-            if (Buffer.Count < ExtensionLength)
+            if (bufferLength < ExtensionLength)
             {
-                NHibernateHelper.GetInstance().GetAsync<T>(GetPosition() + Buffer.Count + 1, ExtensionLength, (list) =>
+                int extensionPosition = GetPosition() + bufferLength;
+                NHibernateHelper.GetInstance().GetAsync<T>(extensionPosition, ExtensionLength, (list) =>
                 {
-
-                    Console.WriteLine("Contain:-------------" + GetPosition() + Buffer.Count + 1);
-                    foreach (var e in Buffer)
-                    {
-                        Console.WriteLine(((Employee)Convert.ChangeType(e, typeof(Employee))).ID);
-                    }
-                    Console.WriteLine("----------------Extention:");
                     foreach (var e in list)
                     {
                         Buffer.AddToBack(e);
-                        Console.WriteLine(((Employee)Convert.ChangeType(e, typeof(Employee))).ID);
                     }
                 });
             }

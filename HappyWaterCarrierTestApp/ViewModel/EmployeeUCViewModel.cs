@@ -69,8 +69,6 @@ namespace HappyWaterCarrierTestApp.ViewModel
         }
 
         public Employee NewEmployee { get; set; }
-        //private ObservableCollection<Employee> employees;
-        //public ObservableCollection<Employee> Employees { get { return employees; } set { employees = value; } }
         public PaginationHelper<Employee> Pagination { get; set; }
         public EmployeeUCViewModel()
         {
