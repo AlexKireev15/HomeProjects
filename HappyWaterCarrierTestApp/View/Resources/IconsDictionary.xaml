@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:HappyWaterCarrierTestApp.View.Resources">
+    <DrawingImage x:Key="plusDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V485 H485 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M485,485z M0,0z M0,0L0,485 485,485 485,0 0,0z M455,455L30,455 30,30 455,30 455,455z" />
+                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M485,485z M0,0z M194.533,290.467L194.533,388.079 290.467,387.575 290.467,290.467 388,290.467 388,194.532 290.467,194.532 290.467,96.921 194.533,97.424 194.533,194.532 96.921,194.532 97.424,290.467 194.533,290.467z M224.533,224.533L224.533,127.267 260.467,127.079 260.467,224.533 358,224.533 358,260.468 260.467,260.468 260.467,357.733 224.533,357.921 224.533,260.467 127.267,260.467 127.079,224.532 224.533,224.532z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+    <DrawingImage x:Key="cancelDrawingImage">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V241.171 H241.171 V0 H0 Z">
+                <DrawingGroup Opacity="1">
+                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M241.171,241.171z M0,0z M138.138,120.754L237.256,22.178C242.008,17.474 242.008,9.85900000000001 237.256,5.16700000000001 232.516,0.463000000000013 224.817,0.463000000000013 220.077,5.16700000000001L121.044,103.659 21.095,3.699C16.355,-1.053 8.656,-1.053 3.916,3.699 -0.824,8.463 -0.824,16.174 3.916,20.926L103.792,120.814 3.555,220.497C-1.185,225.201 -1.185,232.816 3.555,237.508 8.295,242.212 15.994,242.212 20.734,237.508L120.886,137.909 220.437,237.472C225.177,242.224 232.876,242.224 237.616,237.472 242.356,232.708 242.356,224.997 237.616,220.245L138.138,120.754z" />
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+</ResourceDictionary>

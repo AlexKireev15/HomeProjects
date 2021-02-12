@@ -1,0 +1,15 @@
+﻿<Application x:Class="HappyWaterCarrierTestApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:HappyWaterCarrierTestApp"
+             StartupUri="View/MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="View/Resources/IconsDictionary.xaml"/>
+                <ResourceDictionary Source="View/Resources/IconsDictionary.xaml"/>
+                <ResourceDictionary Source="View/Resources/StylesDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
