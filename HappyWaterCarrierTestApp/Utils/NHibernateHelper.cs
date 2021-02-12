@@ -162,7 +162,6 @@ namespace HappyWaterCarrierTestApp
         }
         public void GetAsync<T>(int pos, int length, Action<IList<T>> callback) where T : class
         {
-            Console.WriteLine("GetAsync position " + pos);
             if (pos < 0)
             {
                 length += pos;

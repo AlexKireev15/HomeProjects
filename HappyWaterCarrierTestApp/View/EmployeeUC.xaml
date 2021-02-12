@@ -45,15 +45,15 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <TextBox Grid.Column="0" Text="{Binding Path=NewEmployee.Surname, Mode=TwoWay}"/>
-                <TextBox Grid.Column="1" Text="{Binding Path=NewEmployee.Name, Mode=TwoWay}"/>
-                <TextBox Grid.Column="2" Text="{Binding Path=NewEmployee.Midname, Mode=TwoWay}"/>
-                <DatePicker Grid.Column="3" SelectedDate="{Binding Path=NewEmployee.Birthday, Mode=TwoWay}"/>
+                <TextBox Grid.Column="0" Text="{Binding Path=NewItem.Surname, Mode=TwoWay}"/>
+                <TextBox Grid.Column="1" Text="{Binding Path=NewItem.Name, Mode=TwoWay}"/>
+                <TextBox Grid.Column="2" Text="{Binding Path=NewItem.Midname, Mode=TwoWay}"/>
+                <DatePicker Grid.Column="3" SelectedDate="{Binding Path=NewItem.Birthday, Mode=TwoWay}"/>
                 <ComboBox Grid.Column="4" 
-                            ItemsSource="{Binding Path=NewEmployee.Sex, Converter={converters:EnumConverter}, Mode=OneTime}"
-                            SelectedItem="{Binding Path=NewEmployee.Sex, Converter={converters:SingleEnumConverter}, Mode=TwoWay}"
+                            ItemsSource="{Binding Path=NewItem.Sex, Converter={converters:EnumConverter}, Mode=OneTime}"
+                            SelectedItem="{Binding Path=NewItem.Sex, Converter={converters:SingleEnumConverter}, Mode=TwoWay}"
                             IsSynchronizedWithCurrentItem="False"/>
-                <Button Command="{Binding AddEmployeeCommand}" Click="AddButton_Click" Grid.Column="5" Height="27.5" Width="27.5">
+                <Button Command="{Binding AddCommand}" Click="AddButton_Click" Grid.Column="5" Height="27.5" Width="27.5">
                     <Image Source="{StaticResource ResourceKey=plusDrawingImage}"></Image>
                 </Button>
             </Grid>
@@ -78,7 +78,7 @@
                             <Grid Grid.Column="0">
                                 <i:Interaction.Triggers>
                                     <i:EventTrigger EventName="LostFocus">
-                                        <i:InvokeCommandAction Command="{Binding ElementName=EmployeesList, Path=DataContext.UpdateEmployeeCommand}" CommandParameter="{Binding}"/>
+                                        <i:InvokeCommandAction Command="{Binding ElementName=EmployeesList, Path=DataContext.UpdateCommand}" CommandParameter="{Binding}"/>
                                     </i:EventTrigger>
                                 </i:Interaction.Triggers>
                                 <Grid.ColumnDefinitions>
@@ -101,7 +101,7 @@
                                     IsSynchronizedWithCurrentItem="False"/>
                             </Grid>
                             <Grid Grid.Column="1" >
-                                <Button Command="{Binding ElementName=EmployeesList, Path=DataContext.DeleteEmployeeCommand}" CommandParameter="{Binding}" Height="22.5" Width="22.5">
+                                <Button Command="{Binding ElementName=EmployeesList, Path=DataContext.DeleteCommand}" CommandParameter="{Binding}" Height="22.5" Width="22.5">
                                     <Image Source="{StaticResource ResourceKey=cancelDrawingImage}"></Image>
                                 </Button>
                             </Grid>

@@ -1,4 +1,5 @@
-﻿using HappyWaterCarrierTestApp.Utils;
+﻿using HappyWaterCarrierTestApp.Model;
+using HappyWaterCarrierTestApp.Utils;
 using HappyWaterCarrierTestApp.ViewModel;
 using System.Windows.Controls;
 
@@ -20,12 +21,12 @@ namespace HappyWaterCarrierTestApp.View
             {
                 if (e.VerticalOffset + e.ViewportHeight >= e.ExtentHeight - Constants.DOUBLE_CHECK)
                 {
-                    ((EmployeeUCViewModel)DataContext).LoadNextElement();
+                    ((BaseScrollUCViewModel<Employee>)DataContext).LoadNextElement();
                     ((ScrollViewer)sender).ScrollToVerticalOffset(e.VerticalOffset - 1);
                 }
                 if (e.VerticalOffset <= Constants.DOUBLE_CHECK)
                 {
-                    ((EmployeeUCViewModel)DataContext).LoadPrevElement();
+                    ((BaseScrollUCViewModel<Employee>)DataContext).LoadPrevElement();
                     ((ScrollViewer)sender).ScrollToVerticalOffset(e.VerticalOffset + 1);
                 }
             }

@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 namespace HappyWaterCarrierTestApp.Utils.Pagination
 {
     class ScrollPaginationHelper<T> : PaginationHelper<T>
-        where T : Employee
+        where T : class
     {
         public ObservableCollection<T> VisibleCollection { get; set; }
         private PaginationBuffer<T> nextBuffer;

@@ -1,5 +1,4 @@
-﻿using HappyWaterCarrierTestApp.Model;
-using System;
+﻿using System;
 
 namespace HappyWaterCarrierTestApp.Utils.Pagination
 {

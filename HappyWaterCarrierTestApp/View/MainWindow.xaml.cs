@@ -1,4 +1,5 @@
-﻿using HappyWaterCarrierTestApp.View;
+﻿using HappyWaterCarrierTestApp.Model;
+using HappyWaterCarrierTestApp.View;
 using HappyWaterCarrierTestApp.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -36,7 +37,7 @@ namespace HappyWaterCarrierTestApp
             {
                 case ViewType.Employee:
                     view = new EmployeeUC();
-                    view.DataContext = new EmployeeUCViewModel();
+                    view.DataContext = new BaseScrollUCViewModel<Employee>(new Employee { Birthday = DateTime.Now });
                     break;
                 case ViewType.Unit:
                     view = new UnitUC();

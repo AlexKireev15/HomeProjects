@@ -48,7 +48,6 @@ namespace HappyWaterCarrierTestApp.ViewModel
                                     (o) => App.Current.Dispatcher.BeginInvoke((Action)delegate () {
                                         Pagination.Remove(o);
                                     }));
-                            Console.WriteLine("Deleting element " + ((Employee)obj).ID);
                             
                         })
                     );
