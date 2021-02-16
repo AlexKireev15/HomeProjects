@@ -8,4 +8,26 @@
       <UniqueIdentifier>{1f44f408-ca67-4528-be6f-2eff885e4b24}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PageReader.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WordsCounter.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Headers\PageReader.h">
+      <Filter>src\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Headers\WordsCounter.h">
+      <Filter>src\Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
 </Project>
