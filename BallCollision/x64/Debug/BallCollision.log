@@ -1,0 +1,8 @@
+﻿  GameLoop.cpp
+c:\dev\interview\ballcollision\renderer\renderer.h(19): warning C4244: аргумент: преобразование "const float" в "unsigned int", возможна потеря данных
+c:\dev\interview\ballcollision\objects\ball.h(40): warning C4244: return: преобразование "double" в "float", возможна потеря данных
+c:\dev\interview\ballcollision\gameloop\src\gameloop.cpp(35): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+c:\dev\interview\ballcollision\gameloop\src\gameloop.cpp(122): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+c:\dev\interview\ballcollision\gameloop\src\gameloop.cpp(124): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+  BallCollision.vcxproj -> C:\dev\interview\x64\Debug\BallCollision.exe
+  BallCollision.vcxproj -> C:\dev\interview\x64\Debug\BallCollision.pdb (Full PDB)

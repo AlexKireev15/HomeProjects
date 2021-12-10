@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Renderer\src\Renderer.cpp">
+      <Filter>Render\src</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLoop\src\GameLoop.cpp">
+      <Filter>GameLoop\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\src\ObjectVisitor.cpp">
+      <Filter>Objects\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\src\Ball.cpp">
+      <Filter>Objects\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\src\PhysicsHandler.cpp">
+      <Filter>Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics\CollisionDetector\src\CollisionDetector.cpp">
+      <Filter>Physics\CollisionDetector\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MiddleAverageFilter.h" />
+    <ClInclude Include="Renderer\Renderer.h">
+      <Filter>Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Lazy.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Singleton.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLoop\GameLoop.h">
+      <Filter>GameLoop</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\ObjectVisitor.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Ball.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Object.h">
+      <Filter>Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\PhysicsHandler.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics\CollisionDetector\CollisionDetector.h">
+      <Filter>Physics\CollisionDetector</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Render">
+      <UniqueIdentifier>{ae830404-c720-4977-b756-60b45bab6989}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Render\src">
+      <UniqueIdentifier>{8447c660-84d6-4201-ab95-a135dddd9b3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{ccf19b56-f51e-41f5-95fd-421da911ae3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLoop">
+      <UniqueIdentifier>{f5854083-28fc-40c7-8afc-ede4d44fe209}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLoop\src">
+      <UniqueIdentifier>{4bf44005-a7b4-4b1b-9348-d032aeac2cf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{04b7e215-71be-4af3-a7ff-618f501d48cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\src">
+      <UniqueIdentifier>{34dcc12a-9b35-454e-a24d-30183bfcd7a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{ef7bbb9e-5b1a-47e1-9049-cf0d2fc67298}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics\src">
+      <UniqueIdentifier>{a56a3065-928e-4961-96b8-83ec23e3e2f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics\CollisionDetector">
+      <UniqueIdentifier>{a29d6440-cbb9-45ee-bd2a-04e4a4829471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics\CollisionDetector\src">
+      <UniqueIdentifier>{c547ca42-cb2a-4d01-83a1-c9aa9c90136d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
